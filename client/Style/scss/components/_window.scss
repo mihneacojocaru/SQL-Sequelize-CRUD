@@ -1,0 +1,90 @@
+.window{
+    margin: 1em;
+    .top{
+        background-color: $chat-purple;
+        padding: 10px;
+        @include flexy($dir:column, $align:center);
+        p{
+            font-size: 10px;
+            position: relative;
+        }
+        p::before{
+            content: '';
+            position: absolute;
+            top: 1.5px;
+            left: -9px;
+            width: 7px;
+            height: 7px;
+            background-color: $chat-green;
+            border-radius: 50%;
+        }
+    }
+
+    .body{
+        background-color: $chat-gray;
+        color: $text-black;
+        @include flexy($dir:column,$just:end);
+        width: 350px;
+        padding: 10px;
+        height: 15em;
+        overflow-y: scroll;
+        .receiver{
+            .bubble{
+                float: left;
+                background-color: $bgr-gray;
+                color: $text-black;
+                padding: 10px;
+                border-radius: 20px;
+                margin: 5px 0;
+                span:nth-child(3){
+                    font-size: 10px;
+                }
+            }
+        }
+
+        .sender{
+            .bubble{
+                float: right;
+                background-color: $chat-purple;
+                color: white;
+                padding: 10px;
+                border-radius: 20px;
+                margin: 5px 0;
+                span:nth-child(3){
+                    font-size: 10px;
+                }
+            }  
+             
+        }
+        
+    }
+    .bottom{
+        background-color: $chat-gray;
+        padding: 10px;
+        @include flexy($align:center);
+        textarea{
+            width: 100%;
+            padding: 5px;
+            border: none;
+            resize: none;
+        }
+        span{
+            padding: 7px;
+            margin-left: 5px;
+            color: $chat-green;
+            text-align: center;
+            font-size: 30px;
+            cursor: pointer;
+            &:active{
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+@include mq('md'){
+    .body{
+        min-height: 30em;
+        min-width: 400px;
+    }
+}

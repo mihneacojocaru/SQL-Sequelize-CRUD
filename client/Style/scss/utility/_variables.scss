@@ -1,0 +1,35 @@
+$breakpoints: (
+  "sm": 100px,
+  "md": 840px,
+  "lg": 1024px,
+);
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+$title-font: 'Bebas Neue', sans-serif; 
+$font-stack-primary: "Varela Round", sans-serif;
+$element-width: 90%;  
+$max-element-width: 300px;
+
+//spacing
+
+$btn-width: 35px;
+
+//Colors
+
+$bgr-gradient: linear-gradient(diagonal, #3E155E, #331259);
+
+$bgr-gray: #f6f6f6;
+
+$chat-purple: #712EA4;
+$chat-gray: #E7E8ED;
+$chat-green: #72DB50;
+
+$text-black: #21252A;
+$text-blue: #637290;
+$text-gray: #A1A1A1;
+
+
+

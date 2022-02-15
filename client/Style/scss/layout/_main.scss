@@ -1,0 +1,35 @@
+body{
+   background-image: linear-gradient(to bottom right, #3E155E, #331259);
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   font-family: $font-stack-primary;
+   color: white;
+}
+
+h2{
+   margin: .3em .5em;
+   font-family: $title-font;
+   font-size: 3em;
+}
+
+.container{
+   @include flexy($dir:column,$align:center);
+}
+
+@include mq('md'){
+   .container{
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+   }
+}
+
+@include mq('lg'){
+   .container{
+      justify-content: space-evenly;
+      max-width: 80%;
+      margin: 0 auto;
+   }
+}
+
+

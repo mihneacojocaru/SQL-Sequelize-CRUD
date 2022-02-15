@@ -38,7 +38,7 @@ module.exports = (sequelize) => {
             }
         },
         time_sent:{
-            type:Sequelize.DATE,
+            type:Sequelize.DATE
         }
     },{
         sequelize,
