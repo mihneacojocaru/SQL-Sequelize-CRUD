@@ -414,9 +414,7 @@ h2 {
 .window .body {
   background-color: #E7E8ED;
   color: #21252A;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
+  display: grid;
   width: 350px;
   padding: 10px;
   height: 15em;

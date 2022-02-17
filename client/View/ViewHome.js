@@ -150,11 +150,12 @@ export default class ViewHome{
     }
 
     styleFunction = () => {
-         let t = document.querySelector('.body');
-         t.scrollTo = t.scrollHeight;
+         let chat = document.getElementById('chat1');
+         let x = chat.scrollHeight;
+         chat.scrollTo(0,400);
         // console.log(t.scrollHeight);
-        // //t.style.border = '10px solid black';
-
+        //chat.style.border = '3px solid black';
+        chat.addEventListener('scroll', (e)=>console.log(e))
     }
 }
 

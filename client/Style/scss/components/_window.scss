@@ -23,7 +23,8 @@
     .body{
         background-color: $chat-gray;
         color: $text-black;
-        @include flexy($dir:column,$just:end);
+        //@include flexy($dir:column,$just:end);
+        display: grid;
         width: 350px;
         padding: 10px;
         height: 15em;
