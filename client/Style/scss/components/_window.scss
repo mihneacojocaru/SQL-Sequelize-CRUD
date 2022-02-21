@@ -23,14 +23,15 @@
     .body{
         background-color: $chat-gray;
         color: $text-black;
-        //@include flexy($dir:column,$just:end);
-        display: grid;
+        @include flexy($dir:column,$just:end);
+        //display: grid;
         width: 350px;
         padding: 10px;
         height: 15em;
         overflow-y: scroll;
         .receiver{
             .bubble{
+                position: relative;
                 float: left;
                 background-color: $bgr-gray;
                 color: $text-black;
@@ -54,8 +55,23 @@
                 span:nth-child(3){
                     font-size: 10px;
                 }
-            }  
-             
+            }    
+        }
+
+        #deleteBtn{
+            display: none;
+            position: absolute;
+            color: black;
+            background-color: #f1f1f1;
+            padding: 5px;
+            transform: translateX(-60px);
+            box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
+            border-radius: 5px;
+            z-index: 1;
+            cursor: pointer;
+            &:active{
+                box-shadow: inset 0px 5px 10px 0px rgba(0,0,0,0.2); 
+            }
         }
         
     }

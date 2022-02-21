@@ -73,6 +73,10 @@ export default class ViewHome{
             }
             data.message = message.value;
             await this.sendMessage(data);
+        }else if(obj.className == 'bubble'){
+            let delBtn = document.getElementById('deleteBtn');
+            delBtn.style.display = 'block';
+            console.log(obj);
         }
     }
 
@@ -83,6 +87,7 @@ export default class ViewHome{
         <span id="${id}">${message}</span>
         <br>
         <span>${time}</span>
+        <span id="deleteBtn">Delete<span>
         </div>
         </div>`;
 
